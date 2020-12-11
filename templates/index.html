@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Dharna Shukla">
+
+    <title>Question Answering System</title>
+
+    <!-- Custom styles for this template -->
+    <link href="static/main.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+  <div class="main">
+    <div class="title">
+      <h3><b>Question Answering System</b></h3>
+
+    </div>
+
+    <div class="panel">
+      <form method=post>
+
+        <label for="question">Question:</label><br>
+        <textarea id="question" name="question"
+          rows="1" cols="40" autocomplete="on" >
+      
+        </textarea><br>
+
+         <label for="context">Context:</label><br>
+
+        <textarea id="context" name="context"
+          rows="10" cols="40" autocomplete="on">
+      
+        </textarea>
+
+
+    </div>
+    <br>
+    <div style="margin-bottom: 2rem;">
+      <button class="button" type="submit">Submit</button>
+    </div>
+    </form>
+    {% if output %}
+      <div id="image-box">
+        <table id="result">
+          <tr>
+            <th>Model</th>
+            <th>Answer</th>
+            <th>Score</th>
+          </tr>
+          {% for dict_item in output %}
+          <tr>  
+                <td>{{dict_item.name}}</td>
+                <td>{{dict_item.answer}}</td>
+              
+                <td>{{dict_item.score}}</td>
+         </tr>
+        {% endfor %}
+      </table>
+      </div>
+    {% endif %}
+  </div>
+
+
+</body></html>
