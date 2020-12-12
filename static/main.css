@@ -98,10 +98,9 @@ body {
 }
 
 #image-box {
-  position: relative;
-  width: auto;
-  float: left;
-  margin-bottom: 2rem;
+  
+  width: 500px;
+  
 }
 
 #image-display {

@@ -19,7 +19,34 @@
 
     </div>
 
-    <div class="panel">
+    
+    
+    {% if output %}
+      <center>
+      <div id="image-box">
+        <p>{{question}}</p>
+        <p>{{context}}</p>
+        <table id="result">
+          <tr>
+            <th>Model</th>
+            <th>Answer</th>
+            <th>Score</th>
+          </tr>
+          {% for dict_item in output %}
+          <tr>  
+                <td>{{dict_item.name}}</td>
+                <td>{{dict_item.answer}}</td>
+              
+                <td>{{dict_item.score}}</td>
+         </tr>
+        {% endfor %}
+      </table>
+      <br>
+      <center><a href="/">Homepage</a></center>
+      </div>
+    </center>
+    {% else %}
+      <div class="panel">
       <form method=post>
 
         <label for="question">Question:</label><br>
@@ -42,24 +69,6 @@
       <button class="button" type="submit">Submit</button>
     </div>
     </form>
-    {% if output %}
-      <div id="image-box">
-        <table id="result">
-          <tr>
-            <th>Model</th>
-            <th>Answer</th>
-            <th>Score</th>
-          </tr>
-          {% for dict_item in output %}
-          <tr>  
-                <td>{{dict_item.name}}</td>
-                <td>{{dict_item.answer}}</td>
-              
-                <td>{{dict_item.score}}</td>
-         </tr>
-        {% endfor %}
-      </table>
-      </div>
     {% endif %}
   </div>
 

@@ -35,7 +35,7 @@ def index():
 		ans_squeeze['name'] = 'Squeeze_Bert'			
 		output = [ans_bert,ans_robert,ans_mobile,ans_squeeze]
 
-		return render_template('index.html', output = output)
+		return render_template('index.html', output = output, context=context, question=question)
 
 	return render_template('index.html')
 
