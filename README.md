@@ -13,7 +13,7 @@ $ docker pull dharnashukla94/qa_squad
 - Go to http://localhost:9090
 - Done!
 
-<img src="static/Images/2.png" width="300"> <img src="static/Images/3.png" width="300"> 
+<img src="static/Images/1.png" width="275"> <img src="static/Images/2.png" width="275"> <img src="static/Images/3.png" width="275"> 
 
 
 ## Run with Docker
